@@ -49,8 +49,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
         return pstmt;
     }
 
-    @Override
-    public boolean isCompanyExists(String email, String password) {
+    public Company getCompany(String email, String password){
         Company company = null;
         String sql = "SELECT * FROM COMPANIES WHERE EMAIL = ? AND PASSWORD = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
@@ -63,12 +62,11 @@ public class CompaniesDBDAO implements CompaniesDAO {
         }catch (SQLException e) {
             e.printStackTrace();
         }
-
-        if (company == null){
-            return false;
-        }
-
-        return true;
+        return company;
+    }
+    @Override
+    public boolean isCompanyExists(String email, String password) {
+        return getCompany(email, password) != null;
     }
 
     @Override

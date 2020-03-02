@@ -1,35 +1,26 @@
 package run;
 
-
-import dao.CompaniesDBDAO;
-import dao.CouponsDBDAO;
-import entities.Category;
-import entities.Coupon;
-import exeptions.ExistException;
-import exeptions.NotExistException;
-
-import java.time.LocalDate;
+import facade.AdminFacade;
+import facade.ClientFacade;
+import facade.CompanyFacade;
+import loginManager.ClientType;
+import loginManager.LoginManager;
 
 public class Main {
     public static void main(String[] args) {
 
-        CompaniesDBDAO companiesDAO = new CompaniesDBDAO();
-
-        CouponsDBDAO couponsDAO = new CouponsDBDAO();
-
-//        System.out.println(companiesDAO.getAllCompanies());
+        LoginManager loginManager = LoginManager.getInstance();
 
 
-//        Coupon coupon = new Coupon(1,Category.FOOD,"bsgngb","bgmasbgm",
-//                LocalDate.of(2020,2,3),
-//                LocalDate.of(2021,2,3),
-//                2,244,"fafaf");
-//        try {
-//            couponsDAO.addCoupon(coupon);
-//        } catch (ExistException e) {
-//            e.printStackTrace();
-//        }
+//        AdminFacade facade = (AdminFacade) loginManager.login("admin@admin","admin", ClientType.ADMINISTRATOR);
+//
+//        System.out.println(facade.getAllCompanies());
 
+        CompanyFacade companyFacade = (CompanyFacade) loginManager.login("some@mail","password", ClientType.COMPANY);
+
+        if (companyFacade != null){
+            System.out.println(companyFacade.getCompanyId());
+        }
 
 
     }

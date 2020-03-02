@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab90941e-51ce-4344-8d7e-972ddd65fcc0" name="Default Changelist" comment="" />
+    <list default="true" id="ab90941e-51ce-4344-8d7e-972ddd65fcc0" name="Default Changelist" comment="add facade">
+      <change afterPath="$PROJECT_DIR$/src/main/java/facade/AdminFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/facade/ClientFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/facade/CompanyFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/facade/CustomerFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loginManager/ClientType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loginManager/LoginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CompaniesDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/run/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CompaniesDBDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CompaniesDBDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CouponsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CouponsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CouponsDBDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CouponsDBDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CustomersDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CustomersDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/run/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/run/Main.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,11 +26,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -25,6 +43,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YAMfsxbSD2J0GJIE5FMVJh9chI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -74,5 +95,22 @@
       <updated>1582381051553</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add facade" />
+    <option name="LAST_COMMIT_MESSAGE" value="add facade" />
   </component>
 </project>
