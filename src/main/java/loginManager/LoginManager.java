@@ -22,19 +22,13 @@ public class LoginManager {
         switch (clientType){
             case COMPANY:
                 CompanyFacade companyFacade = new CompanyFacade();
-                if(companyFacade.login(email,password)){
-                    return companyFacade;
-                }
+                return companyFacade.login(email,password) ? companyFacade : null;
             case CUSTOMER:
                 CustomerFacade customerFacade = new CustomerFacade();
-                if(customerFacade.login(email,password)){
-                    return customerFacade;
-                }
+                return customerFacade.login(email,password) ? customerFacade : null;
             case ADMINISTRATOR:
-                AdminFacade adminFacade = new AdminFacade();
-                if(adminFacade.login(email,password)){
-                    return adminFacade;
-                }
+                AdminFacade adminFacade = new AdminFacade(couponsDBDAO);
+                return adminFacade.login(email,password) ? adminFacade : null;
         }
         return null;
     }

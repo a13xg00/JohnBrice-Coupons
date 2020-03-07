@@ -27,7 +27,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
         return new Company(id,name,email,password, getCompanyCoupons(id));
     }
 
-    private ArrayList<Coupon> getCompanyCoupons(long companyId){
+    public ArrayList<Coupon> getCompanyCoupons(long companyId){
         ArrayList<Coupon> companyCoupons = new ArrayList<>();
         String sql = "SELECT * FROM COUPONS WHERE COMPANY_ID = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
@@ -72,7 +72,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
     @Override
     public Company addCompany(Company company) throws ExistException {
         String sql = "INSERT INTO COMPANIES(NAME, EMAIL, PASSWORD) VALUES (?, ?, ?)";
-        if (!isCompanyExists(company.getName(), company.getPassword())){
+        if (!isCompanyExists(company.getEmail(), company.getPassword())){
             try (PreparedStatement pstmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 buildCompanyPSTMT(pstmt, company);
                 pstmt.executeUpdate();
@@ -152,4 +152,5 @@ public class CompaniesDBDAO implements CompaniesDAO {
         }
         return company;
     }
+
 }

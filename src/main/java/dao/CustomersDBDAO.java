@@ -29,7 +29,7 @@ public class CustomersDBDAO implements CustomersDAO {
         return new Customer(id, firstName, lastName, email, password, getCustomerCoupons(id));
     }
 
-    private ArrayList<Coupon> getCustomerCoupons(long customerId){
+    public ArrayList<Coupon> getCustomerCoupons(long customerId){
         ArrayList<Coupon> customerCoupons = new ArrayList<>();
         String sql = "SELECT COUPON_ID FROM CUSTOMERS_VS_COUPONS WHERE CUSTOMER_ID = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
@@ -52,9 +52,7 @@ public class CustomersDBDAO implements CustomersDAO {
         pstmt.setString(4, customer.getPassword());
         return pstmt;
     }
-
-    @Override
-    public boolean isCustomerExists(String email, String password) {
+    public Customer getCustomer(String email, String password){
         Customer customer = null;
         String sql = "SELECT * FROM CUSTOMERS WHERE EMAIL = ? AND PASSWORD = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
@@ -67,12 +65,12 @@ public class CustomersDBDAO implements CustomersDAO {
         }catch (SQLException e) {
             e.printStackTrace();
         }
+        return customer;
+    }
 
-        if (customer == null){
-            return false;
-        }
-
-        return true;
+    @Override
+    public boolean isCustomerExists(String email, String password) {
+        return getCustomer(email,password) !=null;
     }
 
     @Override
@@ -158,6 +156,6 @@ public class CustomersDBDAO implements CustomersDAO {
             throw new NotExistException("Customer with id: " +  customerId + " not found");
         }
         return customer;
-
     }
+
 }

@@ -166,6 +166,16 @@ public class CouponsDBDAO implements CouponsDAO {
         executeCouponPurchaseOperation(customerId, couponId, sql);
     }
 
+    public void deletePurchaseByCouponId(long couponId) {
+        String sql = "DELETE FROM CUSTOMERS_VS_COUPONS WHERE COUPON_ID = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql))  {
+            pstmt.setLong(1,couponId);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void executeCouponPurchaseOperation(long customerId, long couponId, String sql){
         try (PreparedStatement pstmt = connection.prepareStatement(sql))  {
             pstmt.setLong(1,customerId);
