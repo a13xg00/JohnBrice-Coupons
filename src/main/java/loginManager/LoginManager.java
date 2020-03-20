@@ -27,7 +27,7 @@ public class LoginManager {
                 CustomerFacade customerFacade = new CustomerFacade();
                 return customerFacade.login(email,password) ? customerFacade : null;
             case ADMINISTRATOR:
-                AdminFacade adminFacade = new AdminFacade(couponsDBDAO);
+                AdminFacade adminFacade = new AdminFacade();
                 return adminFacade.login(email,password) ? adminFacade : null;
         }
         return null;

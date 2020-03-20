@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab90941e-51ce-4344-8d7e-972ddd65fcc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exeptions/PermissionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exeptions/PurchaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/job/CouponExpirationDailyJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CompaniesDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CouponsDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CouponsDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomersDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/facade/AdminFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/AdminFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/facade/CompanyFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/CompanyFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/facade/CustomerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/CustomerFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loginManager/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loginManager/LoginManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/run/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CompaniesDBDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CompaniesDBDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CouponsDBDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CouponsDBDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CustomersDBDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CustomersDBDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/AdminFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/AdminFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/CompanyFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/CompanyFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/CustomerFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/CustomerFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/loginManager/LoginManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/loginManager/LoginManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/run/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/run/Main.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

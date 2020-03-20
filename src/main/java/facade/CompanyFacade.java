@@ -57,7 +57,7 @@ public class CompanyFacade extends ClientFacade {
         return company.getCoupons();
     }
 
-    public ArrayList<Coupon> getCompanyCouponsByCategory(Category category){
+    public ArrayList<Coupon> getCompanyCoupons(Category category){
         ArrayList<Coupon> coupons = new ArrayList<>();
         for (Coupon coupon: getCompanyCoupons()
              ) {
@@ -66,7 +66,7 @@ public class CompanyFacade extends ClientFacade {
         return coupons;
     }
 
-    public ArrayList<Coupon> getCompanyCouponsByPrice(double maxPrice){
+    public ArrayList<Coupon> getCompanyCoupons(double maxPrice){
         ArrayList<Coupon> coupons = new ArrayList<>();
         for (Coupon companyCoupon: getCompanyCoupons()
              ) {
