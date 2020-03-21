@@ -56,6 +56,30 @@ public class ConnectionPool {
         notifyAll();
     }
 
+    public synchronized void closeAllConnections (){
+        int counter = 0;
+        while (counter<MAX_CONNECTIONS){
+            while (connections.isEmpty()){
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    System.err.println("Someone interrupt waiting");
+                }
+            }
+            Iterator<Connection> itCon = connections.iterator();
+            while (itCon.hasNext()){
+                Connection currentConnection = itCon.next();
+
+                try {
+                    currentConnection.close();
+                    counter++;
+                } catch (SQLException e) {
+                    System.err.println("Couldnt close the current connection");
+                }
+            }
+        }
+    }
+
     public static synchronized ConnectionPool getInstance() {
         if (instance == null) {
             instance = new ConnectionPool();
