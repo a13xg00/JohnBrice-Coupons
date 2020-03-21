@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab90941e-51ce-4344-8d7e-972ddd65fcc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/connections/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connections/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/run/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/facade/CompanyFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/CompanyFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/facade/CustomerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/CustomerFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/job/CouponExpirationDailyJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/job/CouponExpirationDailyJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/run/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/run/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connections/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connections/ConnectionPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/CompanyFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/CompanyFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/CustomerFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/CustomerFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/job/CouponExpirationDailyJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/job/CouponExpirationDailyJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/run/Main.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +80,16 @@
         <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

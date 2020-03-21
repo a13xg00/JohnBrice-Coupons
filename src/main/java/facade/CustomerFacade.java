@@ -39,6 +39,7 @@ public class CustomerFacade extends ClientFacade {
             couponsDBDAO.addCouponPurchase(customer.getId(),coupon.getId());
             coupon.setAmount(coupon.getAmount() - 1 );
             couponsDBDAO.updateCoupon(coupon);
+            customer.getCoupons().add(coupon);
         } else {
             throw new PurchaseException("Invalid Purchase");
         }

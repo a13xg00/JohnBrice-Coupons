@@ -34,20 +34,7 @@ public class Test {
         AdminFacade admin = (AdminFacade) loginManager.login(
                 "admin@admin","admin", ClientType.ADMINISTRATOR);
 
-        System.out.println(admin.getAllCompanies());
-        System.out.println(admin.getAllCustomers());
-        try {
-            System.out.println(admin.getOneCompany(1));
-        } catch (NotExistException e) {
-            System.out.println(e.getMessage());
-        }
-        try {
-            System.out.println(admin.getOneCustomer(1));
-        } catch (NotExistException e) {
-            System.out.println(e.getMessage());
-        }
-
-        Company testCompany = new Company("test", "test@mail", "password", new ArrayList<Coupon>());
+        Company testCompany = new Company("test", "test@mail", "test", new ArrayList<Coupon>());
         try {
             admin.addCompany(testCompany);
         } catch (ExistException e) {
@@ -73,7 +60,7 @@ public class Test {
             System.out.println(e.getMessage());
         }
 
-        testCompany.setName("testCompany");
+        testCompany.setPassword("password");
         try {
             admin.updateCompany(testCompany);
         } catch (NotExistException e) {
@@ -88,6 +75,9 @@ public class Test {
         } catch (NotExistException e) {
             System.out.println(e.getMessage());
         }
+
+        System.out.println(admin.getAllCompanies());
+        System.out.println(admin.getAllCustomers());
 
 
         // 3. Company Tests
@@ -152,8 +142,9 @@ public class Test {
             System.out.println(e.getMessage());
         }
 
-        // 4. Stop Daily Job Thread
+        // 4. Stop Daily Job
         couponExpirationDailyJob.stop();
+        couponExpirationDailyJobThread.interrupt();
 
         // 5. Closing connections
         ConnectionPool pool = ConnectionPool.getInstance();

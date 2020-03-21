@@ -39,7 +39,10 @@ public class CompanyFacade extends ClientFacade {
     }
 
     public void addCoupon(Coupon coupon) throws ExistException {
-        if (isCompanyCoupon(coupon) && isTitleNotExist(coupon)){ couponsDBDAO.addCoupon(coupon); }
+        if (isCompanyCoupon(coupon) && isTitleNotExist(coupon)){
+            couponsDBDAO.addCoupon(coupon);
+            company.getCoupons().add(coupon);
+        }
     }
 
     public void updateCoupon(Coupon coupon) throws NotExistException {

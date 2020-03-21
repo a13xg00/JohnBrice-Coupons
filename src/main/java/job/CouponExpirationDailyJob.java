@@ -12,6 +12,7 @@ public class CouponExpirationDailyJob implements Runnable {
     private CouponsDBDAO couponsDBDAO;
     private boolean quit = false;
 
+
     public CouponExpirationDailyJob() {
         this.couponsDBDAO = new CouponsDBDAO();
     }
@@ -32,7 +33,7 @@ public class CouponExpirationDailyJob implements Runnable {
                 }
                 TimeUnit.DAYS.sleep(1);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }
